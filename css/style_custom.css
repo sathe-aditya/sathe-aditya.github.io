@@ -1,0 +1,57 @@
+a:link,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover .fa,
+.fa {
+    color: white;
+}
+
+#collapse_button {
+    border: 0px;
+}
+
+#first {
+    background-color: #303F9F;
+    /*padding-right: none;*/
+    /*padding-left: none;*/
+    /*height: 100vh;*/
+    width: 98.7vw;
+}
+
+@media only screen and (min-width: 1170px) {
+    #first {
+        height: 100vh;
+    }
+}
+
+#second {
+    background-color: #ABCDEF;
+    height: 100vh;
+    width: 98.7vw;
+    /*width: 100vw;*/
+}
+
+.navbar {
+    background: #363D54;
+    /*font-family: */
+    border-bottom: 0px;
+}
+
+#hoveronme_ka_div {
+    position: absolute;
+    /*left:50px;*/
+    /*top:20px;*/
+    /*visibility: hidden;*/
+}
+
+#icon_chevron {
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}

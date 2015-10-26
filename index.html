@@ -1,195 +1,123 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compitable" content="IE=edge">
-    <title>aditya sathe</title>
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style_custom.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <!--for animated text -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- for scroll effects -->
-    <!--     <link rel="stylesheet" href="page-scroll-effects/css/reset.css">
-    <link rel="stylesheet" href="page-scroll-effects/css/style.css"> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Animated Headlines | CodyHouse</title>
 </head>
-
-<body onload="set_i()" id="mybody" data-hijacking="on" data-animation="scaleDown">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container" id="main">
-            <div class="navbar-header">
-                <button id="collapse_button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a id="nav_brand" class="navbar-brand animated" href="index.html">aditya</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#first">HOME</a></li>
-                    <li><a href="#second">ABOUT</a></li>
-                    <li><a href="#">ETC</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section class="cd-section visible">
-        <div class="container" id="first">
-            <p style="padding:80px;"></p>
-            <div class="row">
-                <div class="col-xs-12 col-sm-5 col-xs-offset-0 col-sm-offset-0" id="gif_ka_div">
-                    <img src="resources/calm1.png" alt="dancing" id="gif_goes_here">
-                </div>
-                <div id="hoveronme_ka_div" class="animated zoomIn">
-                </div>
-                <div class="col-xs-11 col-xs-offset-0 col-sm-offset-0 col-sm-5">
-                    <section class="cd-intro">
-                        <h1 class="cd-headline push">
-                        <span>I love to </span>
-                        <span class="cd-words-wrapper">
-                            <b class="is-visible">read.</b>
-                            <b>sleep.</b>
-                            <b>eat.</b>
-                        </span>
-                    </h1>
-                    </section>
-                </div>
-            </div>
-            <div class="row text-center">
-                <a href="#second">
-                    <i class="fa fa-chevron-down fa-3x animated bounce cd-next" id="icon_chevron"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="cd-section">
-        <div class="container" id="second">
-            <p style="margin-bottom: 30px;">Hello</p>
-        </div>
-    </section>
-    <script>
-    document.getElementById('gif_goes_here').addEventListener("mouseover", change_this);
-    document.getElementById('gif_goes_here').addEventListener("mouseout", change_this);
-    var timer;
-    var duration = 1000;
-
-    function set_i() {
-        timer = setTimeout(dialogue, duration);
-    }
-
-    function change_this() {
-        var im = document.getElementById('gif_goes_here');
-        if (im.getAttribute("src") == "resources/calm1.png") {
-            im.setAttribute("src", "resources/calm1.gif");
-            clearInterval(timer);
-            duration = 10000;
-            timer_1 = setTimeout(delete_hom, 1000);
-
-        } else {
-            im.setAttribute("src", "resources/calm1.png");
-            im.setAttribute("style", "height:400px");
-            im.setAttribute("style", "width:400px");
-            timer = setInterval(dialogue, duration);
-        }
-    }
-
-    function dialogue() {
-        // alert(timer);
-        clearTimeout(timer);
-        // alert(timer);
-        var b = document.getElementById('hoveronme_ka_div');
-        newitem = document.createElement("img");
-        newitem.setAttribute("src", "resources/dialogue-1.png");
-        newitem.setAttribute("class", "animated zoomIn");
-        newitem.setAttribute("id", "hoveronme_ka_img");
-        b_ka_daddy = document.getElementById('gif_ka_div').getBoundingClientRect();
-        left1 = b_ka_daddy.left + 175;
-        top1 = b_ka_daddy.top - 50;
-        b.style.position = "absolute";
-        b.style.top = top1 + "px";
-        b.style.left = left1 + "px";
-        newitem.style.height = 200 + "px";
-        newitem.style.width = 250 + "px";
-        b.appendChild(newitem);
-        // newitem.setAttribute("class","zoomOut");
-        // timer=setTimeout(delete_hom,3000);
-
-    }
-
-    function delete_hom() {
-        var z = document.getElementById('hoveronme_ka_div');
-        while (z.firstChild) {
-            z.removeChild(z.firstChild);
-        }
-    }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- animated text -->
-    <script src="animated-headline/js/jquery-2.1.1.js"></script>
-    <script src="animated-headline/js/main.js"></script>
-    <script src="animated-headline/js/modernizr.js"></script>
-    
-    <script>
-    $(document).ready(function() {
-        $("#nav_brand").mouseover(function() {
-
-            $("#nav_brand").addClass("tada");
-        });
-    });
-    $(document).ready(function() {
-        $("#nav_brand").mouseout(function() {
-            $("#nav_brand").removeClass("tada");
-
-        });
-    });
-
-    $(document).ready(function() {
-        $("#gif_goes_here").mouseout(function() {
-
-            $("#hoveronme_ka_img").addClass("zoomIn");
-        });
-
-    });
-    $(document).ready(function() {
-        $("#gif_goes_here").mouseover(function() {
-            $("#hoveronme_ka_img").removeClass("zoomIn");
-            $("#hoveronme_ka_img").fadeOut(200, function() {
-                $(this).remove();
-            });
-
-        });
-        delete_hom();
-    });
-
-    $(document).ready(function() {
-        nav = $('nav'),
-            lastScrollTop = 0;
-
-        $(document).on('scroll', function() {
-
-            var currentScrollTop = $(this).scrollTop();
-            if (currentScrollTop > lastScrollTop)
-                nav.addClass('animated slideOutUp');
-            else if (currentScrollTop < lastScrollTop) {
-                nav.removeClass('animated slideOutUp');
-                nav.addClass('animated slideInDown');
-            }
-
-            lastScrollTop = currentScrollTop;
-        });
-
-
-
-    });
-    </script>
+<body>
+	<section class="cd-title">
+		<h1>Animated Headlines</h1>
+	</section>
+	
+	<section class="cd-intro">
+		<h1 class="cd-headline rotate-1">
+			<span>My favourite food is</span>
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline letters type">
+			<span>My favourite food is</span> 
+			<span class="cd-words-wrapper waiting">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline letters rotate-2">
+			<span>My favourite food is</span> 
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline loading-bar">
+			<span>My favourite food is</span>
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline slide">
+			<span>My favourite food is</span>
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline clip is-full-width">
+			<span>My favourite food is</span>
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline zoom">
+			<span>My favourite food is</span>
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline letters rotate-3">
+			<span>My favourite food is</span> 
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline letters scale">
+			<span>My favourite food is</span> 
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+	<section class="cd-intro">
+		<h1 class="cd-headline push">
+			<span>My favourite food is</span>
+			<span class="cd-words-wrapper">
+				<b class="is-visible">pizza</b>
+				<b>sushi</b>
+				<b>steak</b>
+			</span>
+		</h1>
+	</section> <!-- cd-intro -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
-
 </html>

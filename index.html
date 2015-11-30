@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/mystyles.css">
-    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <title>Aditya Sathe</title>
@@ -27,9 +29,48 @@
                 </div>
             </div>
             <div class="row text-center">
-                <a href="https://www.dropbox.com/s/qoh02y772yukyxs/Resume.pdf?dl=1" class="btn btn-default">Curriculum Vitae</a>
+                <a href="https://www.dropbox.com/s/qoh02y772yukyxs/Resume.pdf?dl=1" class="btn" id="CV">Curriculum Vitae</a>
             </div>
         </div>
+        <div id="down_arrow" class="text-center">
+            <a href="#second"><span class="fa fa-chevron-down fa-4x visible-lg visible-md visible-sm"></span>
+            <span class="fa fa-chevron-down fa-2x visible-xs"></span></a>
+        </div>
+    </div>
+    <div id="second" class="container-fluid">
+        <div class="row">
+            <div class="text-center about col-xs-12">
+                <span id="Abt_me">About Me</span>
+            </div>
+        </div>
+        <div class="row about_text">
+            <div id="basic" class="col-sm-6 col-xs 12">
+                <p>Hello there, fellow traveller!</p>
+                <p>Welcome to my very own corner of the web! My name is Aditya, and I'm a frontend developer with some interest in machine learning.</p>
+            </div>
+            <div id="advanced" class="col-sm-6 col-xs-12">
+                <p>I love to read books and watch movies.</p>
+                <p> Apart from that, I'm a huge fan of Liverpool FC and Star Trek!
+                    <br> We will definitely get along if you love to play pranks or listne to Coldplay. Suit up! It's going to be an adventure of a lifetime.</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="third" class="container-fluid">
+        <div class="row" id="third_first_row">
+            <div class="col-xs-12 col-sm-2 col-sm-offset-1">
+                <p class="tools">LANGUAGES KNOWN:</p>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <ul class="languages">
+                    <li>HTML</li>
+                    <li>JAVASCRIPT</li>
+                    <li>CSS</li>
+                    <li>C++</li>
+                    <li>PYTHON</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
     </div>
     <script>
     var names = ['Hello', 'Bonjour', 'Hola', 'Hallo', 'Ciao', 'ہیلو', 'Χαίρετε', 'नमस्ते', 'Здравствуйте', 'こんにちは', '您好'];
@@ -44,8 +85,6 @@
 
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-
-    document.getElementById('first').style.height = String(h - 20) + "px";
     </script>
 </body>
 

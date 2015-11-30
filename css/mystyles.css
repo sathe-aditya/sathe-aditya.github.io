@@ -1,20 +1,130 @@
-body{
-	border: 10px solid white;
+body {
+    border: 10px solid white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
 
-
-.text-vert{
-	padding-top: 35vh;
-	padding-bottom: 35vh;
+a:link,
+a:hover,
+a:visited {
+    text-decoration: none;
 }
 
+a:hover .fa,
+.fa {
+    color: white;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.text-vert {
+    padding-top: 35vh;
+    padding-bottom: 28vh;
+}
 
 #first {
-    background-color: #3369FF;
+    background-color: #170A1C;
 }
 
 #welcome {
+    font-family: 'Marck Script', cursive;
     text-align: center;
     font-size: 60px;
     padding-bottom: 20px;
+}
+
+#down_arrow {
+    top: 87vh;
+}
+
+#CV {
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: #FFFFFF;
+}
+
+
+/* Second Div */
+
+#second {
+    background-color: #1f172b;
+}
+
+#Abt_me {
+    font-size: 45px;
+    color: white;
+}
+
+.about {
+    padding-top: 10px;
+    padding-bottom: 35px;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.about_text {
+    color: #F1F1F0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+#basic,
+#advanced {
+    height: 130px;
+}
+
+@media only screen and (min-width: 768px) {
+    .about_text {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    #second {
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #basic {
+        border-bottom: 1px white;
+    }
+    #advanced {
+        padding-top: 50px;
+        border-top: 1px white;
+    }
+    #second {
+        height: 100vh;
+    }
+}
+
+
+/* Third Div */
+
+#third {
+    background-color: #E8C547;
+}
+
+#third_first_row{
+	padding-top: 20px;
+}
+.padded-left {
+    padding-left: 100px;
+}
+
+.tools {
+    font-weight: bold;
+}
+
+.languages > li {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
 }

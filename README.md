@@ -1,1 +1,0 @@
-# sathe-aditya.github.io
